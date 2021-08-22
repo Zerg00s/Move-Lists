@@ -2,14 +2,8 @@
 ![Windows](https://img.shields.io/static/v1?label=OS&message=Windows&color=green)
 
 # Move-Lists
+
 Easily move SharePoint Online list templates from one site to another.
-
-![](MISC/IMG/First-form.png)
-
-Interactive selector of lists and libraries:
-
-![](MISC/IMG/Second-form.png)
-
 
 ## Move SharePoint Lists
 
@@ -21,7 +15,13 @@ Interactive selector of lists and libraries:
 
 - Select source SharePoint Online site.
 - Select destination SharePoint Online site.
+
+![](MISC/IMG/First-form.png)
+
 - Select one or more Lists or Libraries to migrate.
+
+![](MISC/IMG/Second-form.png)
+
 - Sit back and watch your lists and libraries migrated.
 
 ## Limitations
