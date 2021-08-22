@@ -1,3 +1,6 @@
+![SharePoint Online](https://img.shields.io/badge/SharePoint-Online-yellow.svg) 
+![Windows](https://img.shields.io/static/v1?label=OS&message=Windows&color=green)
+
 # Move-Lists
 Easily move SharePoint Online list templates from one site to another.
 
@@ -11,8 +14,15 @@ Migrates list item formatting:
 
 ![](MISC/IMG/Formatting.png)
 
+## Why would I want to use Move-Lists?
+- You need to quickly move multiple lists or libraries.
+- You want to migrate Power App and Power Automate flows and you need to make sure lists dependencies exist.
+- You don't have a migration tool.
+- You don't want or need to write a migration script.
+- You don't want to manually re-create custom lists.
+- You want to move lists from a DEV to a Production site.
 
-## Getting started
+## Move your first SharePoint lists
 
 - Download the [latest version of the Move-Lists package](https://github.com/Zerg00s/Move-Lists/releases/download/1.0/Move-Lists.zip).
 - Unzip on disk.
@@ -26,6 +36,7 @@ Migrates list item formatting:
 - Sit back and watch your lists and libraries migrated.
 
 ## Limitations
+- The script is portable. There is no need to install any PowerShell modules.
 - Move-Lists script does not migrate data. Lists and libraries will be empty. 
 - Mac OS or Linux is not supported.
 - Does not require local admin privileges.
