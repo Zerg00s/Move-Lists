@@ -10,19 +10,8 @@ Interactive selector of lists and libraries:
 
 ![](MISC/IMG/Second-form.png)
 
-Migrates list item formatting:
 
-![](MISC/IMG/Formatting.png)
-
-## Why would I want to use Move-Lists?
-- You need to quickly move multiple lists or libraries.
-- You want to migrate Power App and Power Automate flows and you need to make sure lists dependencies exist.
-- You don't have a migration tool.
-- You don't want or need to write a migration script.
-- You don't want to manually re-create custom lists.
-- You want to move lists from a DEV to a Production site.
-
-## Move your first SharePoint lists
+## Move SharePoint Lists
 
 - Download the [latest version of the Move-Lists package](https://github.com/Zerg00s/Move-Lists/releases/download/1.0/Move-Lists.zip).
 - Unzip on disk.
@@ -42,3 +31,14 @@ Migrates list item formatting:
 - Does not require local admin privileges.
 - Requires Read permission on the Source site.
 - Requires Edit permission on the Target site.
+
+## Why would I want to use Move-Lists?
+- You need to quickly move multiple lists or libraries.
+- You want to migrate Power App and Power Automate flows and you need to make sure lists dependencies exist.
+- You don't have a migration tool.
+- You don't want or need to write a migration script.
+- You don't want to manually re-create custom lists.
+- You want to move lists from a DEV to a Production site.
+- Migrates list item formatting:
+
+![](MISC/IMG/Formatting.png)
