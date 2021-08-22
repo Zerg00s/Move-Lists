@@ -1,11 +1,14 @@
 # Move-Lists
 Easily move SharePoint Online list templates from one site to another.
+
 ![](IMG/First-form.png)
 
 Interactive selector of lists and libraries:
+
 ![](IMG/Second-form.png)
 
 Migrates list item formatting:
+
 ![](IMG/Formatting.png)
 
 
