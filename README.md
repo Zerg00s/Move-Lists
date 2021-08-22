@@ -27,7 +27,7 @@ Easily move SharePoint Online list templates from one site to another.
 ## Limitations
 - The script is portable. There is no need to install any PowerShell modules.
 - Move-Lists script does not migrate data. Lists and libraries will be empty. 
-- Mac OS or Linux is not supported.
+- macOS and Linux are not supported.
 - Does not require local admin privileges.
 - Requires Read permission on the Source site.
 - Requires Edit permission on the Target site.
