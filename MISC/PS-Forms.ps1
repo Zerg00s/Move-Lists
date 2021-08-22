@@ -625,9 +625,11 @@ function Get-FormItemProperties {
     if ($note){
         $NoteLabel = New-Object System.Windows.Forms.Label
         $NoteLabel.Location = "20,$textboxY"
-        $NoteLabel.size = "450,$textboxHeight" 
+        $NoteLabel.size = "450,50" 
+        $NoteLabel.MaximumSize  = "500,50" 
         $NoteLabel.Font = 'Times New Roman,13'
         $NoteLabel.Text = $note
+        $NoteLabel.AutoSize = $true
         $textboxY += $spaceBetweenTextboxes/2
         $Panel.Controls.AddRange(@($NoteLabel))
     }

@@ -41,4 +41,4 @@ Easily move SharePoint Online lists from one site to another.
 - You want to move lists from a DEV to a Production site.
 - Migrates list item formatting:
 
-![](MISC/IMG/Formatting.png)
+<img style="padding-left:60px" src="MISC/IMG/Formatting.png">

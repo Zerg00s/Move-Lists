@@ -27,7 +27,7 @@ $Migration = @{
     Lists       = ""
 }
 
-$Migration = Get-FormItemProperties -item $Migration -dialogTitle "Enter source and target sites" -propertiesOrder @("Source_Site", "Target_Site", "Lists") -note "Leave Lists blank to have an interactive selector"
+$Migration = Get-FormItemProperties -item $Migration -dialogTitle "Enter source and target sites" -propertiesOrder @("Source_Site", "Target_Site", "Lists") -note "List titles, comma-separated. Leave blank to have an interactive selector"
 
 
 Connect-PnPOnline -Url $Migration.Source_Site -UseWebLogin -WarningAction Ignore
