@@ -15,7 +15,7 @@ Clear-Host
 Write-Host $Path -ForegroundColor Green
 
 Set-Location $Path
-. .\PS-Forms.ps1
+. .\MISC\PS-Forms.ps1
 
 Get-ChildItem -Recurse | Unblock-File
 # Legacy PowerShell PnP Module is used because the new one has a critical bug
