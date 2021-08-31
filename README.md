@@ -22,7 +22,7 @@ Easily move SharePoint Online lists from one site to another.
 
 ![](MISC/IMG/Second-form.png)
 
-- Sit back and watch your lists and libraries migrated.
+- Sit back and watch your lists and libraries migrate.
 
 ## Limitations
 - The script is portable. There is no need to install any PowerShell modules.
