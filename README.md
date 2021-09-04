@@ -5,6 +5,13 @@
 
 Easily move SharePoint Online lists from one site to another.
 
+## Prerequisites
+
+- Launch PowerShell
+- Run the following command:
+```
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+```
 ## Move SharePoint Lists
 
 - Download the [latest version of the Move-Lists package](https://github.com/Zerg00s/Move-Lists/releases/download/1.0/Move-Lists.zip).
@@ -23,6 +30,18 @@ Easily move SharePoint Online lists from one site to another.
 ![](MISC/IMG/Second-form.png)
 
 - Sit back and watch your lists and libraries migrate.
+
+## Windows Defender Smartscreen:
+Windows Defender will display a security warning when you attempt to run scripts downloaded from the Internet.
+
+![](MISC/IMG/WindowsDeFender.png)
+
+To avoid this warning:
+
+1. Right click on the `Move-Lists.bat` file and open the Properties window from the contextual menu.
+2. At the bottom of the "General" tab, you should see a "Security" section with an "Unblock" checkbox or button. Click on the button or check the box.
+3. Click OK.
+4. You should now be able to execute the BAT file without warning.
 
 ## Limitations
 - The script is portable. There is no need to install any PowerShell modules.
