@@ -3,7 +3,7 @@
 
 # Move-Lists
 
-Easily move SharePoint Online lists from one site to another.
+Easily move SharePoint Online list templates from one site to another.
 
 ## Prerequisites
 

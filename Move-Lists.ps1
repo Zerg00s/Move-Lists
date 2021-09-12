@@ -38,6 +38,8 @@ if ($Migration.Lists) {
 else {
     
     $lists = Get-PnPList
+    $lists = $lists | Where-Object {$_.Hidden -eq $false}
+    
     $selectedLists = Get-FormArrayItems ($lists) -dialogTitle "Select lists and libraries to migrate" -key Title
     $titles = $selectedLists.Title
 }
