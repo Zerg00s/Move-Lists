@@ -21,6 +21,7 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 | SharePoint Libraries   | ✔        |
 | Modern JSON List customizations  | ✔        |
 | Content Types   | ✔ (migrated automatically, if a list contains any)     |
+| Site Columns   | ✔ (migrated automatically, if a list contains any content types)     |
 | SharePoint data   | ❌       |
 | Lookup fields   | ❌        |
 | Lists located in a single site  | ✔        |
