@@ -12,9 +12,23 @@ Easily move SharePoint Online list templates from one site to another.
 ```
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
+
+## Migratable artifacts
+
+| Artifact      | Support |
+| ----------- | ----------- |
+| SharePoint Lists   | ✔        |
+| SharePoint Libraries   | ✔        |
+| Modern JSON List customizations  | ✔        |
+| Content Types   | ✔ (migrated automatically, if a list contains any)     |
+| SharePoint data   | ❌       |
+| Lookup fields   | ❌        |
+| Lists located in a single site  | ✔        |
+| Lists located in multiple sites and subsites   | ❌        |
+
 ## Move SharePoint Lists
 
-- Download the [latest version of the Move-Lists package](https://github.com/Zerg00s/Move-Lists/releases/download/1.0/Move-Lists.zip).
+- Download the [latest version of the Move-Lists package](https://github.com/Zerg00s/Move-Lists/releases).
 - Unzip on disk.
 - Run `Move-Lists.bat` file.
 
