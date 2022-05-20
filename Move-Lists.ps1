@@ -22,15 +22,20 @@ Get-ChildItem -Recurse | Unblock-File
 Import-Module (Get-ChildItem -Recurse -Filter "*.psd1").FullName -DisableNameChecking
 
 $Migration = @{
-    Source_Site = "https://contoso.sharepoint.com/sites/Site_A"
-    Target_Site = "https://contoso.sharepoint.com/sites/Site_b"
-    Lists       = ""
+    Source_Site  = "https://contoso.sharepoint.com/sites/Site_A"
+    Target_Site  = "https://contoso.sharepoint.com/sites/Site_b"
+    Lists        = ""
+    Verbose_Logs = "FALSE"
 }
 
-$Migration = Get-FormItemProperties -item $Migration -dialogTitle "Enter source and target sites" -propertiesOrder @("Source_Site", "Target_Site", "Lists") -note "List titles are comma-separated. Leave blank to have an interactive selector"
+$Migration = Get-FormItemProperties -item $Migration -dialogTitle "Enter source and target sites" -propertiesOrder @("Source_Site", "Target_Site", "Lists", "Verbose_Logs") -note "List titles are comma-separated. Leave blank to have an interactive selector"
 
 Connect-PnPOnline -Url $Migration.Source_Site -UseWebLogin -WarningAction Ignore
 
+if([System.Convert]::ToBoolean($Migration.Verbose_Logs)){
+    Write-host "Verbose logging is on" -ForegroundColor Yellow
+    Set-PnPTraceLog -On -Level Debug
+}
 if ($Migration.Lists) {
     $titles = $Migration.Lists.Split(",")
 }
@@ -58,13 +63,13 @@ else {
 }
 
 if ($exportContentTypes) {
-    Get-pnpProvisioningTemplate -ListsToExtract $titles -Out "Lists.xml" -Handlers Lists, ContentTypes, Fields -Force -WarningAction Ignore 
+    Get-PnPProvisioningTemplate -ListsToExtract $titles -Out "Lists.xml" -Handlers Lists, ContentTypes, Fields -Force -WarningAction Ignore 
 }
 else {
-    Get-pnpProvisioningTemplate -ListsToExtract $titles -Out "Lists.xml" -Handlers Lists -Force -WarningAction Ignore 
+    Get-PnPProvisioningTemplate -ListsToExtract $titles -Out "Lists.xml" -Handlers Lists -Force -WarningAction Ignore 
 }
 
-((Get-Content -path Lists.xml -Raw) -replace 'RootSite', 'Web') | Set-Content -Path Lists.xml
+((Get-Content -Path Lists.xml -Raw) -replace 'RootSite', 'Web') | Set-Content -Path Lists.xml
 
 foreach ($title in $titles) {
     # Get the latest list item form layout. Footer, Header and the Body:

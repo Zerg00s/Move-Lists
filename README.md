@@ -7,6 +7,7 @@ Easily move SharePoint Online list templates from one site to another.
 
 ## Prerequisites
 
+- Requires [PowerShell 5.0 or later](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 - Launch PowerShell
 - Run the following command:
 ```
@@ -46,17 +47,29 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
 - Sit back and watch your lists and libraries migrate.
 
-## Windows Defender Smartscreen:
+## Windows Defender Smart screen:
 Windows Defender will display a security warning when you attempt to run scripts downloaded from the Internet.
 
 ![](MISC/IMG/WindowsDeFender.png)
 
-To avoid this warning:
+To avoid this warning you need to unblock the script files using one of the options:
+
+### Option 1: unblock files manually
 
 1. Right click on the `Move-Lists.bat` file and open the Properties window from the contextual menu.
 2. At the bottom of the "General" tab, you should see a "Security" section with an "Unblock" checkbox or button. Click on the button or check the box.
 3. Click OK.
 4. You should now be able to execute the BAT file without warning.
+
+### Option 2: Using PowerShell
+
+1. Start PowerShell
+2. cd to the Move-Lists folder
+3. Run the following script to unblock all script files
+
+```
+Get-ChildItem -Recurse | Unblock-File
+```
 
 ## Limitations
 - The script is portable. There is no need to install any PowerShell modules.
