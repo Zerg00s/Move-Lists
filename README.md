@@ -24,7 +24,7 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 | Content Types   | ✔ (migrated automatically, if a list contains any)     |
 | Site Columns   | ✔ (migrated automatically, if a list contains any content types)     |
 | SharePoint data   | ❌       |
-| Lookup fields   | ❌        |
+| Lookup fields   | ⚠  You _can_ migrate lookup fields, but you _must_ migrate the lookup lists at the same time as your primary list. It means, you will have to select multiple related lists during the migration.   |
 | Lists located in a single site  | ✔        |
 | Lists located in multiple sites and subsites   | ❌        |
 
